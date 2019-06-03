@@ -1,22 +1,63 @@
-// get a reference to the sms or call radio buttons
+// // get a reference to the sms or call radio buttons
 
-// get refences to all the settings fields
+// var callsTotalElemThree = document.querySelector(".callTotalSettings");
+// var smsTotalElemThree = document.querySelector(".smsTotalSettings");
+// var totalCostElemThree = document.querySelector(".totalSettings");
+// var callCost = document.querySelector(".callCostSetting");
+// var smsCost = document.querySelector(".smsCostSetting");
+// var warningLevel = document.querySelector(".warningLevelSetting");
+// var criticalLevel = document.querySelector(".criticalLevelSetting");
+// var updateSettingsBtn = document.querySelector(".updateSettings");
+// var billItemTypeWithSettings = document.querySelector(".billItemTypeWithSettings");
 
-//get a reference to the add button
+// //get a reference to the add button
+// var settingBillAddBtn = document.querySelector(".radioBillAddBtn");
 
-//get a reference to the 'Update settings' button
+// var callsTotal = 0;
+// var smsTotal = 0;
+// var totalCost = 0;
 
-// create a variables that will keep track of all the settings
+// var callCostThree = 0;
+// var smsCostThree = 0;
+// var warningLevelThree = 0;
+// var criticalLevelThree = 0;
 
-// create a variables that will keep track of all three totals.
 
-//add an event listener for when the 'Update settings' button is pressed
+// // my setting bill function
 
-//add an event listener for when the add button is pressed
+// function updateSettingsBtn(){
 
-//in the event listener get the value from the billItemTypeRadio radio buttons
-// * add the appropriate value to the call / sms total
-// * add the appropriate value to the overall total
-// * add nothing for invalid values that is not 'call' or 'sms'.
-// * display the latest total on the screen.
-// * check the value thresholds and display the total value in the right color.
+// }
+
+// function settingBillTotal(){
+//     var checkedSettingBtn = document.querySelector("input[name='billItemType']:checked");
+// if (checkedSettingBtn){
+//     var settingItemType = checkedSettingBtn.value
+//     // billItemType will be 'call' or 'sms'
+// }
+//     if (settingItemType === "call"){
+//         callsTotal += 2.75 
+        
+//     }
+//     else if (settingItemType === "sms"){
+//         smsTotal += 0.75;
+//     }
+    
+//     callsTotalElemThree.innerHTML = callsTotal.toFixed(2);
+//     smsTotalElemThree.innerHTML = smsTotal.toFixed(2);
+//      totalCost = callsTotal + smsTotal;
+//      totalCostElemThree.innerHTML = totalCost.toFixed(2);
+
+//     if (totalCost >= 50){
+//         totalCostElemThree.classList.add("danger");
+//     }
+//     else if (totalCost >= 30){
+//         totalCostElemThree.classList.add("warning");
+//     }
+// }
+
+// // event listener
+
+// radio.addEventListener('click', settingBillTotal);
+
+
