@@ -11,42 +11,34 @@ var radioSource = document.querySelector(".billTemplate").innerHTML;
 var billTemplate = Handlebars.compile(radioSource);
 var radioBillElem = document.querySelector(".radioBill");
 
-function radioBillTotal(){
+function radioBillTotal() {
     var checkedRadioBtn = document.querySelector("input[name='billItemType']:checked");
- var colorSwitch = instance1.colorChanger();
+    var colorChange = instance1.colorChanger();
 
-    instance1.radioBill(checkedRadioBtn.value )
-    
-  
-    // callsTotalElemTwo2.innerHTML = instance1.getTotalCall();
-    // smsTotalElemTwo2.innerHTML = instance1.getTotalSms();
-    // totalCostElemTwo2.innerHTML = instance1.getTotalBill();
+    instance1.radioBill(checkedRadioBtn.value)
 
     var radioBill = ({
         callTotal: instance1.getCallTotal(),
         smsTotal: instance1.getSmsTotal(),
-        total: instance1.getBillTotal(), 
-        colorSwitch
-        });
-    
-        radioBillHTML = billTemplate(radioBill);
-        radioBillElem.innerHTML = radioBillHTML;
-    }
+        total: instance1.getBillTotal(),
+        colorChange
+    });
 
-// event listener
+    radioBillHTML = billTemplate(radioBill);
+    radioBillElem.innerHTML = radioBillHTML;
+}
 
 radioBillAddBtn.addEventListener('click', radioBillTotal);
 
 
-Handlebars.registerHelper('warn', function() {
-    if(instance1.colorChanger() === "warning"){
-        console.log('test')
-    return true
-    }
-});
+// Handlebars.registerHelper('warn', function () {
+//     if (instance1.colorChanger() === "warning") {
+//         return true
+//     }
+// });
 
-Handlebars.registerHelper('danger', function() {
-    if(instance1.colorChanger() === "danger"){
-        return true
-        } 
-});
+// Handlebars.registerHelper('danger', function () {
+//     if (instance1.colorChanger() === "danger") {
+//         return true
+//     }
+// });
