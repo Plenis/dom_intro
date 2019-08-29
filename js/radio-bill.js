@@ -32,7 +32,7 @@ function RadioButtonBill() {
 
     function colorChanger() {
 
-        if (getBillTotal() > 30 && getBillTotal() < 50) {
+        if (getBillTotal() >= 30 && getBillTotal() < 50) {
             return "warning"
         }
 

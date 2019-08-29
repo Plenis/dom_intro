@@ -12,15 +12,18 @@ var billTemplate = Handlebars.compile(radioSource);
 var radioBillElem = document.querySelector(".radioBill");
 
 function radioBillTotal() {
+    
     var checkedRadioBtn = document.querySelector("input[name='billItemType']:checked");
-    var colorChange = instance1.colorChanger();
-
+  
     instance1.radioBill(checkedRadioBtn.value)
 
+    var colorChange = instance1.colorChanger();
+
+
     var radioBill = ({
-        callTotal: instance1.getCallTotal(),
-        smsTotal: instance1.getSmsTotal(),
-        total: instance1.getBillTotal(),
+        callTotal: "R" + instance1.getCallTotal(),
+        smsTotal: "R" + instance1.getSmsTotal(),
+        total: "R" + instance1.getBillTotal(),
         colorChange
     });
 
@@ -30,15 +33,3 @@ function radioBillTotal() {
 
 radioBillAddBtn.addEventListener('click', radioBillTotal);
 
-
-// Handlebars.registerHelper('warn', function () {
-//     if (instance1.colorChanger() === "warning") {
-//         return true
-//     }
-// });
-
-// Handlebars.registerHelper('danger', function () {
-//     if (instance1.colorChanger() === "danger") {
-//         return true
-//     }
-// });

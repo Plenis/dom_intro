@@ -32,12 +32,8 @@ function textBillOpp() {
     }
 
     function colorIndicator(){
-            console.log('color indicator');
-            console.log(getTotalBill());
-          
-            
-        if (getTotalBill() > 30 && getTotalBill() < 50){
-            
+           
+        if (getTotalBill() >= 30 && getTotalBill() < 50){
             return "warning"
         }
         if (getTotalBill() >= 50){

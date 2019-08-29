@@ -20,9 +20,9 @@ function textBillTotal() {
      
     
     var textBill = ({
-    callTotal: instance.getTotalCall(),
-    smsTotal: instance.getTotalSms(),
-    total: instance.getTotalBill(), 
+    callTotal: "R" + instance.getTotalCall(),
+    smsTotal: "R" + instance.getTotalSms(),
+    total: "R" + instance.getTotalBill(), 
     colorChange
     });
 
@@ -31,17 +31,3 @@ function textBillTotal() {
 }
 
 textTotalAddBtn.addEventListener('click', textBillTotal);
-
-// Handlebars.registerHelper('warn', function() {
-//     if(instance.colorIndicator() === "warning"){ 
-//         console.log('warning')
-//     return true
-//     }
-// });
-
-// Handlebars.registerHelper('danger', function() {
-//     if(instance.colorIndicator() === "danger"){
-//         console.log('danger')
-//         return true
-//         } 
-// });
